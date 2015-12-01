@@ -2,7 +2,7 @@ FROM       phusion/baseimage:0.9.16
 MAINTAINER Andy Bavier <acb@cs.princeton.edu>
 
 RUN apt-get update
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y ufw dnsmasq
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y ufw dnsmasq tcpdump
 
 ### Dnsmasq setup
 ADD vcpe.conf /etc/dnsmasq.d/
