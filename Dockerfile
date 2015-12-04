@@ -5,12 +5,12 @@ RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y ufw dnsmasq tcpdump
 
 ### Dnsmasq setup
-ADD vcpe.conf /etc/dnsmasq.d/
-ADD resolv.conf /var/run/dnsmasq/
+RUN mkdir /etc/service/dnsmasq
+ADD etc/service/dnsmasq/run /etc/service/dnsmasq
 
 ### Firewall and NAT setup
-ADD before.rules /etc/ufw/
-ADD rc.local /etc/rc.local
+ADD etc/ufw/before.rules /etc/ufw/
+ADD etc/rc.local /etc/rc.local
 RUN chmod +x /etc/rc.local
 
 

@@ -17,4 +17,6 @@ ufw allow from 192.168.0.0/24
 ufw route allow in on eth1 out on eth0
 ufw route allow in on eth1 out on eth2
 
+service dnsmasq start
+
 exit 0
