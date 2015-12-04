@@ -6,7 +6,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y ufw dnsmasq tcpdump
 
 ### Dnsmasq setup
 RUN mkdir /etc/service/dnsmasq
-ADD etc/service/dnsmasq/run /etc/service/dnsmasq
+ADD etc/service/dnsmasq/run /etc/service/dnsmasq/
 
 ### Firewall and NAT setup
 ADD etc/ufw/before.rules /etc/ufw/
