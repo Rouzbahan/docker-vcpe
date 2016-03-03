@@ -1,0 +1,3 @@
+#!/bin/sh
+
+[ -e /etc/dnsmasq.d/safe ] && exec /usr/sbin/dnsmasq -k -x /var/run/dnsmasq/dnsmasq-safe.pid -p 5353 -u dnsmasq -7 /etc/dnsmasq.d/safe,.dpkg-dist,.dpkg-old,.dpkg-new
